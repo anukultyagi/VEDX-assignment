@@ -1,0 +1,48 @@
+@import "../Styles/colors";
+
+//product-Items
+.ProductItems {
+	display: grid;
+	gap: 2px;
+	grid-template-columns: repeat(9, 1fr);
+	padding: 1rem;
+	align-items: center;
+	font-weight: 500;
+
+	.Item__orderId {
+		font-weight: 700;
+	}
+	.Item__customer,
+	.Item__address,
+	.Item__details {
+		grid-column: span 2 / span 2;
+	}
+
+	.Item__address,
+	.Item__details {
+		:last-child {
+			color: $dark-grey;
+		}
+	}
+
+	.Item__status {
+		width: fit-content;
+		border-radius: 15px;
+		padding: 0.5rem 1rem;
+	}
+
+	.Status__Completed {
+		background-color: $secondary-green;
+		color: $primary-green;
+	}
+
+	.Status__Delivered {
+		background-color: $secondary-blue;
+		color: $primary-blue;
+	}
+
+	.Status__Prepared {
+		background-color: $secondary-yellow;
+		color: $primary-yellow;
+	}
+}

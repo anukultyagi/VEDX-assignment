@@ -1,0 +1,44 @@
+@import "../Styles/colors";
+
+.ProductsContainer {
+	height: 100%;
+	user-select: none;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	.ProductsContainer__Header {
+		padding: 1rem;
+		border-radius: 5px;
+		background-color: $primary-grey;
+		display: grid;
+		gap: 2px;
+		grid-template-columns: repeat(9, 1fr);
+		:nth-child(2),
+		:nth-child(3),
+		:nth-child(4) {
+			grid-column: span 2 / span 2;
+		}
+		.Header__title {
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			span {
+				cursor: pointer;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				.Header__icon {
+					color: $secondary-grey;
+					height: 20px;
+					width: 20px;
+				}
+			}
+		}
+	}
+	.ProductsContainer__items-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow: auto;
+	}
+}

@@ -1,0 +1,45 @@
+@import "../Styles/colors";
+
+// search bar 
+.SearchBar {
+	position: relative;
+	width: 40%;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	.SearchBar__icon,
+	.ClearSearch__icon {
+		position: absolute;
+		height: 20px;
+		width: 20px;
+	}
+
+	//search Bar Icon
+	.SearchBar__icon {
+		color: $secondary-grey;
+		z-index: 1;
+		left: 20px;
+	}
+
+	// clear search icon 
+	.ClearSearch__icon {
+		cursor: pointer;
+		right: 10px;
+	}
+
+	// Search Bar Input 
+	.SearchBar__input {
+		font-size: 1rem;
+		font-weight: 500;
+		flex-grow: 1;
+		padding: 5px 50px;
+		border-radius: 10px;
+		border: 3px solid $secondary-grey;
+		&,
+		&:focus,
+		&:active,
+		&:hover {
+			outline: none;
+		}
+	}
+}
